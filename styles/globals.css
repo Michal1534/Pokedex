@@ -14,3 +14,295 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.header {
+  height: auto;
+  background-color: var(--backgroundColor);
+  text-align: center;
+  align-items: flex-end;
+  justify-content: end;
+  margin-bottom: 0;
+}
+h1{
+  font-size: 3.5rem;
+}
+.switch{
+  top: 0;
+  position: sticky;
+  margin-left: 20px;
+  padding-top: 15px;
+}
+
+.switch label{
+  color: var(--text-color);
+}
+
+main {
+  flex: auto;
+  background-color: var(--background-color);
+}
+
+.search{
+  display: flex;
+  line-height: 1;
+  text-align: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding-left: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.search span{
+  margin-right: 20px;
+}
+.search input{
+  border: 1px solid #000;
+  width: 25%;
+}
+
+.list {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 10px;
+}
+
+.pokemon {
+  width: auto;
+  height: auto;
+  text-align: center;
+  background-color: var(--cardcolor);
+  padding: 10px 15px;
+}
+
+
+.pokemon img {
+  max-width: 85%;
+  height: 230px;
+}
+
+button {
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  background-color: var(--buttoncolor);
+  color: var(--text-color);
+  font-size: 70px;
+}
+
+.type {
+  display: inline;
+  margin-top: 25 px;
+  padding: 15%;
+}
+
+.bold {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.types{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+.poison {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(192, 0, 188);
+}
+
+.fire {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: red;
+}
+
+.grass {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(4, 255, 17);
+}
+
+.water {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(41, 107, 238);
+}
+
+.bug {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(82, 118, 54);
+}
+
+.electric {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: gold;
+}
+
+.flying {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(208, 170, 184);
+}
+
+.normal {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(255, 190, 40);
+}
+
+.ground {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: brown;
+}
+
+.fairy {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(220, 157, 167);
+}
+
+.fighting {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: coral;
+}
+
+.psychic {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(255, 0, 162);
+}
+
+.ghost {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(234, 131, 255);
+}
+
+.steel {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(156, 156, 156);
+}
+
+.dark {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(114, 73, 51);
+}
+
+
+.dragon {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(78, 48, 138);
+}
+
+.ice {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(68, 207, 200);
+}
+
+.rock {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 15px;
+  background-color: rgb(121, 121, 121);
+}
+
+
+.modal {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: var(---background-color);
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modalContent {
+  width: 400px;
+  border-radius: 5px;
+  position: relative;
+  transition: inherit;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100px);
+  border: 4px solid #000;
+}
+
+.active .modalContent {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.stats {
+  font-size: 20px;
+}
+
+footer{
+  text-align: center;
+}
+
+.light {
+  --backgroundColor: rgb(237, 255, 182);
+  --buttoncolor: rgb(255, 176, 67);
+  --text-color: black;
+  --cardcolor: rgb(97, 223, 47);
+}
+
+.dark {
+  --backgroundColor: rgb(36, 36, 36);
+  --buttoncolor: rgb(59, 0, 89);
+  --text-color: white;
+  --cardcolor: rgb(66, 0, 84);
+}
+
+.wrapper {
+  display: 100%;
+  background-color: var(--backgroundColor);
+  color: var(--text-color);
+}
